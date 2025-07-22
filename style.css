@@ -187,12 +187,8 @@ body {
     padding:0 20px;
 }
 
-/* .see-more {
-    width: 100%;
-    display:flex;
-    flex: flex-end;
-    
-} */
+
+
 
 .see-more-link {
     text-decoration: none;
@@ -239,6 +235,7 @@ body {
     text-align: center;
     font-size: 1.5em;
     height: 14em;
+    width: auto;
     
 
 }
@@ -305,7 +302,7 @@ body {
 
 }
 
-@media screen and (min-width:750px) and (max-width:1200px) {
+@media screen and (min-width:750px) and (max-width:1000px) {
     .header {
         justify-content: space-around;
     }
@@ -333,7 +330,7 @@ body {
         flex-direction: row;
     }
      .footer{
-        width: 100%;
+        width: 100vw;
      }
 }
 
@@ -349,7 +346,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         margin: 0 auto;
     }
-    .footer{width: 100%;
+    .footer{width: 100vw;
         max-width:1440px;
 
     }
