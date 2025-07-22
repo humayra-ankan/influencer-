@@ -182,7 +182,7 @@ body {
 .all-products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 50px;
     margin:0 auto;
     padding:0 20px;
 }
@@ -283,7 +283,7 @@ body {
 
     .all-products {
         grid-template-columns: repeat(1, 1fr);
-
+        gap: 30px;
         margin: 0 auto;
     }
 
@@ -344,6 +344,7 @@ body {
 
     .all-products {
         grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
         margin: 0 auto;
     }
     .footer{width: 100vw;
