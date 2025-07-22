@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 20px 50px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 34px;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banner-img {
+    background-image: url(./Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    flex: 1 1 40%;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 582px;
+    flex: 1 1 50%;
+}
+
+.banner-title {
+    font-size: 3.25em;
+}
+
+.banner-subtitle {
+    color: rgba(58, 58, 58, 1);
+    font-size: 1em;
+}
+
+.btn-primary {
+    border: none;
+    padding: 10px 24px;
+    border-radius: 24px;
+    background-color: rgba(224, 44, 109, 1);
+    color: rgba(255, 255, 255, 1);
+    width: 194px;
+    margin-top: 20px;
+}
+
+/* Brand Logos Section */
+.brand-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 50px;
+    padding: 50px;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+}
+
+.all-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-card {
+    height: 476px;
+    width: 100%;
+    max-width: 329px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-name {
+    font-weight: 500;
+    font-size: 1.75em;
+    padding-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1.5em;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    font-weight: bold;
+    color: rgba(120, 120, 133, 1);
+}
+
+/* ---------- Responsive Media Queries ---------- */
+
+@media screen and (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .banner-title {
+        font-size: 1.75em;
+    }
+
+    .banner-subtitle {
+        font-size: 0.875em;
+    }
+
+    .banner-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .all-products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-card {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+    .header {
+        justify-content: space-around;
+        padding: 40px 20px;
+    }
+
+    .banner {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .banner-content {
+        flex: 1 1 50%;
+    }
+
+    .banner-img {
+        flex: 1 1 40%;
+    }
+
+    .all-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .all-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

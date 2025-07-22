@@ -60,7 +60,7 @@
 }
 .banner-img{background-image:url(./Circle\ design.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    /* background-position: center; */
 
 }
 .banner-content{display:flex;
@@ -100,6 +100,86 @@
     bordr-bottom:2px;
 
 }
+.products{
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:34px;
+
+}
+
+.product-card{
+    height:476px;
+    width:329px;
+    padding: 15px;
+    border-radius:5px ;
+    box-shadow:4px 4px 40px rgba(0, 0, 0, 0.15);
+}
+.product-name{
+    font-weight: 500px;
+    font-size: 1.75em;
+    padding-bottom: 5px;
+    
+}
+.product-price{
+    font-size:1.5em;
+  
+}
+.product-description{
+    display:flex;
+    flex-direction: column;
+  
+}
+.comment{
+    font-weight: bold;
+    color:rgba(120, 120, 133, 1);
+}
+.all-products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.see-more {display: flex;
+
+
+  text-align: right;
+}
+
+.see-more-link {
+  text-decoration: none;
+  font-weight: bold;
+}
+.featured-products{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 96px;
+    margin: auto;
+
+}
+.feature-content{max-width: 610px;
+    flex-wrap: wrap;
+}
+.footer{color:rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    height: 14em;
+
+}
+.footer-copyright{ font-size: 0.75em;
+    
+}
+.icon-container{
+    display: flex;
+    gap:16px;
+}
 @media screen and (max-width:750px){
     .header{
         flex-direction:row;
@@ -124,20 +204,46 @@
         align-items: center;
         text-align: center;
     }
+       .all-products{
+        grid-template-columns: repeat(1, 1fr);
+        
+        margin: 0 auto;
+    }
+     .featured-products{
+        flex-direction: column-reverse;
+     }  
+     .feature-content{display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+     }
+
+
 }
 
 @media screen and (min-width:750px) and (max-width:1440px){
     .header{ justify-content:space-around;}
-     .banner{ max-width:1440px
+     .banner{ min-width:  750px;
+        max-width:1440px;
             margin: 0 auto;
 
         }
-       
-
-    
+      
+   .all-products{
+        grid-template-columns: repeat(2, 1fr);
+        
+        margin: 0 auto;
+    }
+       .featured-products{
+        flex-direction: column;
+     }  
 }
 
 @media screen and (min-width:1440px){
     .header{ justify-content:space-around;}
+      .all-products{
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+    }
 }
 
